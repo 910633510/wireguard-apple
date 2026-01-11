@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "WireGuardKitC",
             dependencies: [],
-            publicHeadersPath: "."
+            publicHeadersPath: "include"
         ),
         .target(
             name: "WireGuardKitGo",
