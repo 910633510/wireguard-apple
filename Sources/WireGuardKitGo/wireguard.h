@@ -10,6 +10,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#if __has_include("wireguard-go-version.h")
+#include "wireguard-go-version.h"
+#endif
+
 typedef void(*logger_fn_t)(void *context, int level, const char *msg);
 extern void wgSetLogger(void *context, logger_fn_t logger_fn);
 extern int wgTurnOn(const char *settings, int32_t tun_fd);
